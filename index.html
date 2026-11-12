@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>Scouting Beuningen ’76 | Een wereld vol avontuur</title>
+<meta name="description" content="Scouting Beuningen ’76. Bekijk onze speltakken en neem contact op.">
+<style>
+:root{--green:#00a651;--blue:#0875bd;--ink:#17211c;--muted:#64716b;--cream:#f5f7f4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.5}
+a{color:inherit;text-decoration:none}.wrap{width:min(1220px,calc(100% - 48px));margin:auto}
+.topbar{height:7px;border-bottom:1px solid #e7e7e7;background:#fff}
+header{height:74px;background:#fff;position:relative;z-index:5;border-bottom:1px solid #ededed}
+.nav{height:100%;display:flex;align-items:center;justify-content:flex-end;gap:28px}
+.logo{position:absolute;left:max(calc((100% - 1220px)/2),24px);top:16px;width:116px;height:116px;background:#fff;border-radius:0 0 58px 58px;display:flex;align-items:flex-start;justify-content:center;padding:5px 7px 14px;z-index:8;box-shadow:0 4px 10px #0000000c}
+.logo img{width:100%;height:100%;object-fit:contain}
+.header-actions{display:flex;align-items:center;gap:25px;color:var(--green);font-size:14px;letter-spacing:.5px}
+.header-actions a{display:flex;align-items:center;gap:8px}
+.hero{height:min(640px,58vw);min-height:450px;position:relative;background:#315b39 url('assets/hero.jpg') center 44%/cover no-repeat;color:#fff;display:flex;align-items:center}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.43),rgba(0,0,0,.08) 72%),linear-gradient(0deg,rgba(0,0,0,.15),transparent 45%)}
+.hero-content{position:relative;z-index:1;padding-left:10.5%;padding-top:30px}
+.hero h1{font-size:clamp(44px,5.3vw,76px);line-height:1.05;letter-spacing:1px;text-transform:uppercase;margin:0;font-weight:900;text-shadow:0 2px 14px #0005;max-width:720px}
+.hero h1 span{display:block}
+.hero-sub{margin:22px 0 0;font-size:18px;font-weight:600;letter-spacing:.2px}
+.hero-cta{display:inline-flex;margin-top:26px;background:var(--green);color:white;padding:13px 22px;font-weight:800;border-radius:2px}
+.section{padding:48px 0 72px;background:#fff}
+.section-title{font-family:Georgia,serif;font-size:clamp(31px,3vw,43px);color:var(--green);margin:0 0 28px;font-weight:700}
+.speltakken{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.spel{min-width:0}.spel-photo{height:210px;background:#dce8dd center/cover no-repeat;position:relative;overflow:hidden}
+.spel-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.13),transparent 60%)}
+.spel h3{font-family:Georgia,serif;font-size:30px;line-height:1.15;color:var(--green);margin:17px 0 8px}
+.spel p{font-size:16px;margin:0;color:#3d4842}.spel strong{font-weight:800}
+.photo-bevers{background-image:url('assets/bevers.jpg')}.photo-welpen{background-image:url('assets/welpen.jpg')}.photo-luchtwelpen{background-image:url('assets/luchtwelpen.jpg')}.photo-scouts{background-image:url('assets/scouts.jpg')}.photo-luchtscouts{background-image:url('assets/luchtscouts.jpg')}.photo-explorers{background-image:url('assets/explorers.jpg')}
+.contact{background:#f4f7f4;padding:72px 0}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:start}
+.contact h2{font-family:Georgia,serif;color:var(--green);font-size:42px;margin:0 0 12px}
+.contact-intro p{font-size:17px;color:var(--muted);max-width:390px}
+.form{background:#fff;padding:30px;box-shadow:0 8px 30px #183a2410}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:14px;font-weight:700;margin:0 0 6px}
+input,select,textarea{width:100%;border:1px solid #d6ded8;border-radius:2px;padding:13px 14px;font:inherit;margin:0 0 17px;background:#fff}
+textarea{min-height:125px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid #00a65135;border-color:var(--green)}
+.submit{background:var(--green);color:#fff;border:0;padding:14px 24px;font-size:15px;font-weight:800;cursor:pointer}
+.honeypot{position:absolute;left:-9999px}
+footer{background:#173a2b;color:#fff;padding:24px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:800px){.header-actions{gap:16px}.header-actions .quick-label{display:none}.logo{left:18px;width:90px;height:95px}.hero{height:530px;min-height:0;background-position:55% center}.hero-content{padding-left:6%;padding-right:6%}.speltakken{grid-template-columns:repeat(2,1fr);gap:25px 18px}.spel-photo{height:170px}.spel h3{font-size:26px}.contact-grid{grid-template-columns:1fr;gap:22px}}
+@media(max-width:520px){header{height:65px}.header-actions{gap:14px}.header-actions a:nth-child(1){display:none}.logo{top:12px;width:80px;height:84px}.hero{height:480px}.hero h1{font-size:43px}.hero-sub{font-size:16px}.section{padding:38px 0 54px}.speltakken{grid-template-columns:1fr 1fr;gap:22px 14px}.spel-photo{height:130px}.spel h3{font-size:22px;margin-top:12px}.spel p{font-size:14px}.contact{padding:52px 0}.contact h2{font-size:34px}.form{padding:20px}.form-grid{grid-template-columns:1fr;gap:0}}
+.rental{padding:70px 0;background:#fff}
+.rental-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+.rental-photo{height:360px;background:#dfe8df url('assets/blokhut.jpg') center/cover no-repeat}
+.rental-copy .eyebrow{font-size:13px;color:var(--green);font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+.rental-copy h2{font-family:Georgia,serif;color:var(--green);font-size:clamp(34px,3.4vw,46px);line-height:1.12;margin:12px 0 18px}
+.rental-copy p{font-size:18px;color:var(--muted);max-width:510px}
+.rental-cta{display:inline-flex;margin-top:12px;background:var(--green);color:#fff;padding:14px 22px;font-weight:800;border-radius:2px}
+.header-actions>a:first-child{font-size:14px;letter-spacing:.4px;text-transform:uppercase}
+@media(max-width:800px){.rental-grid{grid-template-columns:1fr;gap:24px}.rental-photo{height:300px}}
+@media(max-width:520px){.rental{padding:50px 0}.rental-photo{height:230px}.rental-copy p{font-size:16px}}
+
+.rental-shortcut{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff!important;padding:10px 17px;border-radius:2px;font-weight:800;letter-spacing:.2px!important;text-transform:none!important}
+.rental-shortcut:hover{background:#008a43}
+@media(max-width:520px){.header-actions{gap:10px}.rental-shortcut{padding:9px 11px;font-size:13px!important}.header-actions>a:first-child{display:inline-flex}}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<header><div class="wrap nav">
+<a class="logo" href="#home" aria-label="Scouting Beuningen 76"><img src="assets/logo-beuningen76.png" alt="Scouting Beuningen ’76"></a>
+<div class="header-actions">
+<a class="rental-shortcut" href="#verhuur">Verhuur <span aria-hidden="true">→</span></a>
+<a href="#speltakken"><span class="quick-label">Speltakken</span></a>
+<a href="#contact" aria-label="Contact"><span aria-hidden="true">✉</span></a>
+
+</div></div></header>
+<main id="home">
+<section class="hero">
+<div class="wrap hero-content">
+<h1><span>Een wereld vol</span><span>avontuur</span></h1>
+<p class="hero-sub">Scouting Beuningen ’76</p>
+<a class="hero-cta" href="#speltakken">ONTDEK ONZE SPELTAKKEN&nbsp; →</a>
+</div></section>
+<section class="section" id="speltakken"><div class="wrap">
+<h2 class="section-title">Onze speltakken</h2>
+<div class="speltakken">
+<article class="spel"><div class="spel-photo photo-bevers" role="img" aria-label="Bevers"></div><h3>Bevers</h3><p><strong>4–7 jaar</strong><br>Zaterdag 10:00–12:00</p></article>
+<article class="spel"><div class="spel-photo photo-welpen" role="img" aria-label="Welpen"></div><h3>Welpen</h3><p><strong>7–11 jaar</strong><br>Zaterdag 10:00–12:00</p></article>
+<article class="spel"><div class="spel-photo photo-luchtwelpen" role="img" aria-label="Luchtwelpen"></div><h3>Luchtwelpen</h3><p><strong>7–11 jaar</strong><br>Vrijdag 18:30–20:30</p></article>
+<article class="spel"><div class="spel-photo photo-scouts" role="img" aria-label="Scouts"></div><h3>Scouts</h3><p><strong>11–15 jaar</strong><br>Zaterdag 10:00–13:00</p></article>
+<article class="spel"><div class="spel-photo photo-luchtscouts" role="img" aria-label="Luchtscouts"></div><h3>Luchtscouts</h3><p><strong>11–15 jaar</strong><br>Vrijdag 18:30–21:00</p></article>
+<article class="spel"><div class="spel-photo photo-explorers" role="img" aria-label="Explorers"></div><h3>Explorers</h3><p><strong>15–18 jaar</strong><br>Zaterdag 10:00–13:00</p></article>
+</div></div></section>
+<section class="rental" id="verhuur"><div class="wrap rental-grid">
+<div class="rental-photo" role="img" aria-label="De blokhut van Scouting Beuningen ’76"></div>
+<div class="rental-copy"><div class="eyebrow">Verhuur</div><h2>Onze blokhut huren?</h2>
+<p>Onze blokhut is te huur. Wil je meer weten over de mogelijkheden, beschikbaarheid of tarieven? Neem dan contact met ons op via het contactformulier.</p>
+<a class="rental-cta" href="#contact" onclick="document.getElementById('onderwerp').value='verhuur'">Meer informatie aanvragen&nbsp; →</a>
+</div></div></section>
+<section class="contact" id="contact"><div class="wrap contact-grid">
+<div class="contact-intro"><h2>Neem contact op</h2><p>Een vraag over aanmelden, verhuur of iets anders? Kies hieronder het onderwerp. Je bericht komt bij het juiste team terecht.</p></div>
+<form class="form" action="contact.php" method="post">
+<div class="honeypot"><label>Niet invullen<input name="website" tabindex="-1" autocomplete="off"></label></div>
+<div class="form-grid"><div><label for="naam">Naam *</label><input id="naam" name="naam" required maxlength="100" autocomplete="name"></div><div><label for="email">E-mailadres *</label><input id="email" name="email" type="email" required maxlength="160" autocomplete="email"></div></div>
+<div class="form-grid"><div><label for="telefoon">Telefoonnummer</label><input id="telefoon" name="telefoon" maxlength="40" autocomplete="tel"></div><div><label for="onderwerp">Onderwerp *</label><select id="onderwerp" name="onderwerp" required><option value="">Maak een keuze</option><option value="aanmelden">Aanmelden</option><option value="verhuur">Verhuur</option><option value="overig">Overige vragen</option></select></div></div>
+<label for="bericht">Bericht *</label><textarea id="bericht" name="bericht" required maxlength="5000"></textarea>
+<button class="submit" type="submit">Verstuur bericht →</button>
+</form></div></section>
+</main>
+<footer><div class="wrap"><span>© Scouting Beuningen ’76</span><span>Tijdelijke website</span></div></footer>
+</body></html>
