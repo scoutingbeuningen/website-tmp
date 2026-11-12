@@ -35,18 +35,18 @@ header{height:74px;background:#fff;position:relative;z-index:5;border-bottom:1px
 .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:start}
 .contact h2{font-family:Georgia,serif;color:var(--green);font-size:42px;margin:0 0 12px}
 .contact-intro p{font-size:17px;color:var(--muted);max-width:390px}
-.form{background:#fff;padding:30px;box-shadow:0 8px 30px #183a2410}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-label{display:block;font-size:14px;font-weight:700;margin:0 0 6px}
-input,select,textarea{width:100%;border:1px solid #d6ded8;border-radius:2px;padding:13px 14px;font:inherit;margin:0 0 17px;background:#fff}
-textarea{min-height:125px;resize:vertical}
-input:focus,select:focus,textarea:focus{outline:2px solid #00a65135;border-color:var(--green)}
-.submit{background:var(--green);color:#fff;border:0;padding:14px 24px;font-size:15px;font-weight:800;cursor:pointer}
-.honeypot{position:absolute;left:-9999px}
+.contact-card{background:#fff;padding:30px;box-shadow:0 8px 30px #183a2410}
+.contact-items{display:grid;grid-template-columns:1fr 1fr;gap:26px 30px}
+.contact-item h3{font-size:13px;color:var(--green);font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 6px}
+.contact-item p{margin:0;font-size:16px;color:#3d4842}
+.contact-item a{color:var(--green);font-weight:700;overflow-wrap:anywhere}
+.contact-item a:hover{text-decoration:underline}
+.contact-item .socials{display:flex;gap:18px;flex-wrap:wrap}
+.rental-copy p a{color:var(--green);font-weight:700}
 footer{background:#173a2b;color:#fff;padding:24px 0;font-size:13px}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 @media(max-width:800px){.header-actions{gap:16px}.header-actions .quick-label{display:none}.logo{left:18px;width:90px;height:95px}.hero{height:530px;min-height:0;background-position:55% center}.hero-content{padding-left:6%;padding-right:6%}.speltakken{grid-template-columns:repeat(2,1fr);gap:25px 18px}.spel-photo{height:170px}.spel h3{font-size:26px}.contact-grid{grid-template-columns:1fr;gap:22px}}
-@media(max-width:520px){header{height:65px}.header-actions{gap:14px}.header-actions a:nth-child(1){display:none}.logo{top:12px;width:80px;height:84px}.hero{height:480px}.hero h1{font-size:43px}.hero-sub{font-size:16px}.section{padding:38px 0 54px}.speltakken{grid-template-columns:1fr 1fr;gap:22px 14px}.spel-photo{height:130px}.spel h3{font-size:22px;margin-top:12px}.spel p{font-size:14px}.contact{padding:52px 0}.contact h2{font-size:34px}.form{padding:20px}.form-grid{grid-template-columns:1fr;gap:0}}
+@media(max-width:520px){header{height:65px}.header-actions{gap:14px}.header-actions a:nth-child(1){display:none}.logo{top:12px;width:80px;height:84px}.hero{height:480px}.hero h1{font-size:43px}.hero-sub{font-size:16px}.section{padding:38px 0 54px}.speltakken{grid-template-columns:1fr 1fr;gap:22px 14px}.spel-photo{height:130px}.spel h3{font-size:22px;margin-top:12px}.spel p{font-size:14px}.contact{padding:52px 0}.contact h2{font-size:34px}.contact-card{padding:22px}.contact-items{grid-template-columns:1fr;gap:22px}}
 .rental{padding:70px 0;background:#fff}
 .rental-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
 .rental-photo{height:360px;background:#dfe8df url('assets/blokhut.jpg') center/cover no-repeat}
@@ -93,18 +93,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <section class="rental" id="verhuur"><div class="wrap rental-grid">
 <div class="rental-photo" role="img" aria-label="De blokhut van Scouting Beuningen ’76"></div>
 <div class="rental-copy"><div class="eyebrow">Verhuur</div><h2>Onze blokhut huren?</h2>
-<p>Onze blokhut is te huur. Wil je meer weten over de mogelijkheden, beschikbaarheid of tarieven? Neem dan contact met ons op via het contactformulier.</p>
-<a class="rental-cta" href="#contact" onclick="document.getElementById('onderwerp').value='verhuur'">Meer informatie aanvragen&nbsp; →</a>
+<p>Onze blokhut is te huur. Wil je meer weten over de mogelijkheden, beschikbaarheid of tarieven? Mail ons dan via <a href="mailto:verhuur@scoutingbeuningen.nl">verhuur@scoutingbeuningen.nl</a>.</p>
+<a class="rental-cta" href="mailto:verhuur@scoutingbeuningen.nl?subject=Huren%20blokhut">Meer informatie aanvragen&nbsp; →</a>
 </div></div></section>
 <section class="contact" id="contact"><div class="wrap contact-grid">
-<div class="contact-intro"><h2>Neem contact op</h2><p>Een vraag over aanmelden, verhuur of iets anders? Kies hieronder het onderwerp. Je bericht komt bij het juiste team terecht.</p></div>
-<form class="form" action="contact.php" method="post">
-<div class="honeypot"><label>Niet invullen<input name="website" tabindex="-1" autocomplete="off"></label></div>
-<div class="form-grid"><div><label for="naam">Naam *</label><input id="naam" name="naam" required maxlength="100" autocomplete="name"></div><div><label for="email">E-mailadres *</label><input id="email" name="email" type="email" required maxlength="160" autocomplete="email"></div></div>
-<div class="form-grid"><div><label for="telefoon">Telefoonnummer</label><input id="telefoon" name="telefoon" maxlength="40" autocomplete="tel"></div><div><label for="onderwerp">Onderwerp *</label><select id="onderwerp" name="onderwerp" required><option value="">Maak een keuze</option><option value="aanmelden">Aanmelden</option><option value="verhuur">Verhuur</option><option value="overig">Overige vragen</option></select></div></div>
-<label for="bericht">Bericht *</label><textarea id="bericht" name="bericht" required maxlength="5000"></textarea>
-<button class="submit" type="submit">Verstuur bericht →</button>
-</form></div></section>
+<div class="contact-intro"><h2>Neem contact op</h2><p>Een vraag over aanmelden, verhuur of iets anders? Mail direct het juiste team, of kom eens langs bij onze blokhut.</p></div>
+<div class="contact-card"><div class="contact-items">
+<div class="contact-item"><h3>Aanmelden</h3><p><a href="mailto:aanmelden@scoutingbeuningen.nl">aanmelden@scoutingbeuningen.nl</a></p></div>
+<div class="contact-item"><h3>Verhuur</h3><p><a href="mailto:verhuur@scoutingbeuningen.nl">verhuur@scoutingbeuningen.nl</a></p></div>
+<div class="contact-item"><h3>Overige vragen</h3><p><a href="mailto:info@scoutingbeuningen.nl">info@scoutingbeuningen.nl</a></p></div>
+<div class="contact-item"><h3>Bezoekadres</h3><p>Reekstraat 13A<br>6551 DR Weurt<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Reekstraat+13A+6551+DR+Weurt" target="_blank" rel="noopener">Route plannen →</a></p></div>
+<div class="contact-item"><h3>Volg ons</h3><p class="socials"><a href="https://www.facebook.com/ScoutingBeuningen76/" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/scoutingbeuningen76/" target="_blank" rel="noopener">Instagram</a></p></div>
+</div></div></div></section>
 </main>
 <footer><div class="wrap"><span>© Scouting Beuningen ’76</span><span>Tijdelijke website</span></div></footer>
 </body></html>

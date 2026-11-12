@@ -1,41 +1,39 @@
-SCOUTING BEUNINGEN '76 – TIJDELIJKE WEBSITE V6
+# Scouting Beuningen '76 – Temporary website
 
-Bestanden:
-- index.html
-- contact.php
-- assets/logo-beuningen76.png
-- assets/hero.jpg (eigen foto toevoegen)
-- assets/bevers.jpg
-- assets/welpen.jpg
-- assets/luchtwelpen.jpg
-- assets/scouts.jpg
-- assets/luchtscouts.jpg
-- assets/explorers.jpg
-- assets/blokhut.jpg (foto van de te huren blokhut)
+A static one-page website, hosted on GitHub Pages at https://scoutingbeuningen.nl. The site content itself is in Dutch.
 
-FOTO'S:
-De Facebook-pagina kon in deze sessie niet worden uitgelezen (Facebook blokkeerde de toegang).
-Plaats daarom eigen foto's uit de Facebook-pagina in de map assets en geef ze exact de bestandsnamen hierboven.
-Aanbevolen:
-- hero.jpg: liggende foto, liefst minimaal 1800x900 px
-- speltakfoto's: liggend, minimaal 900x600 px
-Zonder die bestanden toont de browser een rustige groene/lichte fallback. Gebruik alleen foto's waarvoor de groep publicatierechten heeft.
+## Files
+- `index.html` – the entire website (HTML and CSS)
+- `CNAME` – the custom domain for GitHub Pages (`scoutingbeuningen.nl`)
+- `.nojekyll` – makes GitHub Pages serve the files as they are, without a Jekyll build
+- `assets/` – logo and photos (`hero.jpg`, one photo per age group, `blokhut.jpg`)
 
-INHOUD:
-De speltakken tonen uitsluitend leeftijd en opkomsttijd, zoals opgegeven. Er is daarnaast een aparte verhuursectie voor de blokhut.
-Het contactformulier routeert:
-- Aanmelden -> aanmelden@scoutingbeuningen.nl
-- Verhuur -> verhuur@scoutingbeuningen.nl
-- Overige vragen -> info@scoutingbeuningen.nl
+Only use photos the group has the rights to publish.
 
-PUBLICEREN BIJ KEURIGONLINE:
-1. Maak eerst een back-up van de bestaande websitebestanden.
-2. Upload de inhoud van deze map naar de documentroot (meestal public_html).
-3. Zorg dat PHP actief is en SSL/HTTPS werkt.
-4. Test alle drie de formulierkeuzes en controleer inbox en spam.
-5. Controleer of noreply@scoutingbeuningen.nl als afzender is toegestaan.
-Het formulier gebruikt PHP mail(). Als KeurigOnline SMTP vereist, configureer dan SMTP met de officiële gegevens van het e-mailaccount.
+## Contact details
+The contact details are in `index.html`, in the section with `id="contact"`:
+- Aanmelden (sign-ups) → aanmelden@scoutingbeuningen.nl
+- Verhuur (rental) → verhuur@scoutingbeuningen.nl
+- Overige vragen (other questions) → info@scoutingbeuningen.nl
+- Bezoekadres (visiting address) → Reekstraat 13A, 6551 DR Weurt, with a Google Maps link
+- Volg ons (follow us) → Facebook and Instagram
 
-Dit pakket is een concept en nog niet live gepubliceerd. Test de e-mailbezorging voordat je de DNS of domeinbestemming wijzigt.
+The "Meer informatie aanvragen" button in the rental section opens an email to verhuur@.
 
-HEADER: De niet-functionele menuknop is verwijderd.
+## Publishing with GitHub Pages
+1. Push the changes to the `main` branch.
+2. In the repository, go to **Settings → Pages**.
+3. Under **Source**, choose "Deploy from a branch", branch `main`, folder `/ (root)`.
+4. Under **Custom domain**, enter `scoutingbeuningen.nl` (it is also in the `CNAME` file).
+5. Turn on **Enforce HTTPS** once GitHub has issued the certificate. This can take up to 24 hours.
+
+Every push to `main` republishes the site automatically.
+
+## Viewing locally
+Open `index.html` in a browser, or run this in the repository folder:
+
+```sh
+python3 -m http.server
+```
+
+and go to http://localhost:8000.
